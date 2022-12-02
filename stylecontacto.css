@@ -8,13 +8,9 @@
 .header{
     width: 1920px;
     height: 95px;
-    /* outline: solid 1px blueviolet; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: absolute;
-    top: 0;
-    left: 0; */
     animation-name: header;
     animation-direction: normal;
     animation-duration: 1.5s;
@@ -37,37 +33,37 @@
     color: white;
     height: 80px;
     margin-top: 10px;
-    /* outline: 1px solid rgb(177, 20, 216); */
+    width: min(250px, 90%);
 }
 
 .menu{
-    /* outline: solid 1px blueviolet; */
-    /* margin-right: 40px; */
-    /* padding: 2%; */
     display: flex;
-    position: relative;
     width: 200px;
     right: 80px;
     justify-content: space-between;
+    margin-right: 20px;
 }
 .nav-link{
     text-decoration: none;
     color: white;
     background-color:rgb(70, 71, 68);
     padding: 3%; 
-    border-radius: 5%;   
+    border-radius: 5%;    
+    transition: border-radius 0.9s;
+}
+.nav-link:nth-child(1){
+    margin-right: 5px;
 }
 
 .nav-link:hover{
     text-decoration: none;
     color: white;
     background-color:var(--violeta);
-    border-radius: 15%;
+    border-radius: 15px;
     transition: all 1s;
 }
 body{
-    /* margin-top: 110px; */
-    margin-bottom: 30px;
+    
     background-image: url(gente.jpg);
     background-attachment: fixed;
     background-position: center; 

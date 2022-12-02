@@ -7,9 +7,8 @@
 }
 
 .header{
-    width: 100%;
+    width: 100vw;
     height: 95px;
-    /* outline: solid 1px blueviolet; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,10 +16,9 @@
     animation-direction: normal;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    animation-iteration-count: unset;
-    animation-play-state: unset;
     animation-timing-function: ease-in;
-}
+    
+    }
 
 
 
@@ -29,17 +27,13 @@
         background-color: NONE;
     }
     100%{
-        transition: background-color;
         background-color:var(--gris);
     }
 }
 
-.menu{
-    /* outline: solid 1px blueviolet; */
-    /* margin-right: 40px; */
-    /* padding: 2%; */
+.menu{    
     display: flex;
-    position: relative;
+   
     width: 200px;
     right: 80px;
     justify-content: space-between;
@@ -50,13 +44,14 @@
     background-color:rgb(70, 71, 68);
     padding: 3%; 
     border-radius: 5%;   
+    transition: border-radius 0.9s;
 }
 
 .nav-link:hover{
     text-decoration: none;
     color: white;
     background-color:var(--violeta);
-    border-radius: 15%;
+    border-radius: 15px;
     transition: all 1s;
 }
 
@@ -64,25 +59,22 @@
     color: white;
     height: 80px;
     margin-top: 10px;
-    /* outline: 1px solid rgb(177, 20, 216); */
+    width: min(250px, 90%);
+
 }
 
 body{
-    /* margin-top: 110px; */
     background-image: url(gente.jpg);
     background-attachment: fixed;
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
-    /* display: grid; */
     background-color: var(--violeta);
-    /* justify-items: center; */
+    
     
 }
 
 section{
-    margin: 30px;
-    /* outline: solid 2px greenyellow; */
     display: grid;
     justify-items: center;
 }
@@ -92,7 +84,6 @@ section{
     justify-content: center;
     color: var(--violeta);
     background-color: var(--gris);
-    padding: 1.5%;
     border: 2.5px blueviolet solid;
     border-radius: 20%;
 }
@@ -106,8 +97,8 @@ h2{
     justify-content: center;
     align-items: center;
     height: 950px;
-    width: 950px;
-    outline: solid 8px var(--violeta) ;
+    width: min(950px,90%);
+    border: groove 8px var(--violeta) ;
     background-image: url(fecha.jpg);
     background-position: center ;
     background-size: cover;
@@ -126,98 +117,127 @@ h2{
 
 @keyframes cambia{
     0%{
-        transition: background-image ;
+        
+        -webkit-background-size:cover;
         background-image: url(fecha.jpg);
+     
     }
     10%{
-        transition: background-image ;
+        
+
         background-image: url(HIGHMOB.jpg);
     }
     20%{
-        transition: background-image ;
+        
+
         background-image: url(kevin.jpg);
     }
     30%{
-        transition: background-image ;
+        
+
         background-image: url(marian.png);
     }
     40%{
-        transition: background-image ;
+        
+ 
         background-image: url(joaquincossi.png);
     }
     50%{
-        transition: background-image ;
+        
+     
         background-image: url(jp.png);
     }
     60%{
-        transition: background-image ;
+        
+ 
         background-image: url(HIGHMOB.jpg);
     }
     70%{
-        transition: background-image ;
+        
+  
         background-image: url(marian.png);
     }
     80%{
-        transition: background-image 5s;
+        
         background-image: url(martino.png);
     }
     85%{
-        transition: background-image 5s;
+       
         background-image: url(martino.png);
     }
     95%{
-        transition: background-image ;
+   
         background-image: url(RISAS.jpg);
     }
     100%{
-        transition: background-image ;
+       
         background-image: url(fecha.jpg);
     }
     
 }
 
 .cont2{
-    margin-top: 30px;
+    
     display: grid;
-    justify-content: center;
-    justify-items: center;
     background-image: url(RISAS.jpg);
     background-position: center;
     background-size: cover;
     height: 850px;
-    width: 950px;
+    align-items: center;
+    width: min(90%,950px);
     outline: solid 8px rgba(177, 20, 216, 0.808);
     background-color: var(--gris);
 }
 
-.text2{
-    
-    margin: 5px;
-    color: var(--gris);
-    filter: drop-shadow(20px 10px 10px rgba(0, 0, 0, 0.877));
 
-
-}
 
 .ubi{
-    height: 40px;
-    width: 80px;
+    margin-inline: auto;
+    height: 12px;
+    width: 12px;
     border: var(--violeta) 3px solid;
     border-radius: 15%;
     display: flex;
+    font-size: 18px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: white;
     background-color:rgb(70, 71, 68);
-    padding: 3%; 
-    border-radius: 5%;
+    padding: 8%; 
+    border-radius: 15px;   
+    transition: all 1s;
     /* margin-left: 425px; */
 }
 .ubi:hover{
     text-decoration: none;
-    color: white;
-    background-color:var(--violeta);
-    border-radius: 15%;
+ 
+    background-color:transparent;
+    border-radius: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 4px groove white;
+    border-right: 4px groove white;
     transition: all 1s;
+    transform: scale(1.3) rotate(45deg);
+    
+}
+p{
+    transition: all 1s;
+}
+.ubi:hover p{
+    transition: all 1s;
+    transform: rotate(-45deg);
+    font-size: 22px;
+
+}
+.mapa{
+    width: 90%;
+    height: 100%;
+    margin-bottom: 10%;
+    margin-inline: auto;
+   
+}
+.logo{
+    margin-bottom: 15px;
 }
